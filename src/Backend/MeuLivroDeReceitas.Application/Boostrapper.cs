@@ -14,6 +14,7 @@ using MeuLivroDeReceitas.Application.UseCases.Receita.Deletar;
 using MeuLivroDeReceitas.Application.UseCases.Receita.RecuperarPorId;
 using MeuLivroDeReceitas.Application.UseCases.Receita.Registrar;
 using MeuLivroDeReceitas.Application.UseCases.Usuario.AlterarSenha;
+using MeuLivroDeReceitas.Application.UseCases.Usuario.AlterarUsuario;
 using MeuLivroDeReceitas.Application.UseCases.Usuario.RecuperarPerfil;
 using MeuLivroDeReceitas.Application.UseCases.Usuario.Registrar;
 using Microsoft.Extensions.Configuration;
@@ -64,6 +65,7 @@ public static class Boostrapper
     {
         services.AddScoped<IRegistrarUsuarioUseCase, RegistrarUsuarioUseCase>()
             .AddScoped<ILoginUseCase, LoginUseCase>()
+            .AddScoped<IAlterarUsuarioUseCase, AlterarUsuarioUseCase>()
             .AddScoped<IAlterarSenhaUseCase, AlterarSenhaUseCase>()
             .AddScoped<IRegistrarReceitaUseCase, RegistrarReceitaUseCase>()
             .AddScoped<IDashboardUseCase, DashboardUseCase>()

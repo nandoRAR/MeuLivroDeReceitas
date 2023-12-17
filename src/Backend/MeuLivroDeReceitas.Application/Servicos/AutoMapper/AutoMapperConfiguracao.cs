@@ -20,6 +20,9 @@ public class AutoMapperConfiguracao : Profile
         CreateMap<Comunicacao.Request.RequestRegistrarUsuarioJson, Domain.Entidades.Usuario>()
            .ForMember(destino => destino.Senha, config => config.Ignore());
 
+        CreateMap<Comunicacao.Request.RequestAlterarUsuarioJson, Domain.Entidades.Usuario>()
+         .ForMember(destino => destino.Senha, config => config.Ignore());
+
         CreateMap<Comunicacao.Request.RequestReceitaJson, Domain.Entidades.Receita>();
         CreateMap<Comunicacao.Request.RequestIngredienteJson, Domain.Entidades.Ingrediente>();
     }
